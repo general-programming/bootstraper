@@ -1,0 +1,7 @@
+plugin: netbox.netbox.nb_inventory
+api_endpoint: https://netbox.generalprogramming.org
+validate_certs: True
+config_context: False
+group_by:
+  - tags
+group_names_raw: True

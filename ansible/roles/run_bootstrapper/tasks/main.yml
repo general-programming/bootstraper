@@ -1,0 +1,17 @@
+- name: Upload latest bootstrapper code
+  ansible.posix.synchronize:
+    src: src/
+    dest: /root/bootstrapper/
+
+- name: Ensure virtualenv installed
+  ansible.builtin.package:
+    name: python3-virtualenv
+    state: present
+
+- name: Install python packages
+  pip:
+    requirements: /root/bootstrapper/requirements.txt
+    virtualenv: /root/env3
+
+- name: Run bootstrapper
+  ansible.builtin.command: /root/env3/bin/python3 /root/bootstrapper/client.py

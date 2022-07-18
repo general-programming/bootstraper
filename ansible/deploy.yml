@@ -1,0 +1,4 @@
+- hosts: bootstrapper_experiment
+  become: true
+  roles:
+    - role: run_bootstrapper

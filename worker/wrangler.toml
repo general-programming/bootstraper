@@ -1,0 +1,6 @@
+name = "bootstraper"
+main = "./index.js"
+
+workers_dev = true
+compatibility_date = "2022-07-17"
+usage_model = "bundled"
